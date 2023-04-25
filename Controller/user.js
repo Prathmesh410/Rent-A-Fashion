@@ -153,4 +153,16 @@ exports.pushOrderInPurchaseList = (req, res, next) => {
     )
   }
 
- 
+  exports.updateAddedProducts = (userId, productId) => {
+    User.findByIdAndUpdate(
+      userId,
+      { $push: { added_products: productId } },
+      { new: true },
+      (err, user) => {
+        if (err) {
+          console.log("Failed to update user: ", err);
+        }
+        console.log("User updated successfully: ", user);
+      }
+    );
+  };

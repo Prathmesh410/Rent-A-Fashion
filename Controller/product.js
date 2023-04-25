@@ -1,5 +1,6 @@
 const category = require("../Models/category");
 const Product = require("../Models/product");
+const {updateAddedProducts} = require("../Controller/user")
 const formidable = require("formidable");
 const _ = require("lodash");
 const fs = require("fs");
@@ -69,7 +70,6 @@ exports.createProduct = (req, res) => {
           });
         }
       }
-  
       // Save to the DB
       product.save((err, product) => {
         if (err) {
@@ -77,6 +77,10 @@ exports.createProduct = (req, res) => {
             error: "Saving product in DB failed",
           });
         }
+
+        const userId = req.profile._id;
+        const productId = product._id;
+        updateAddedProducts(userId, productId);
         res.json(product);
       });
     });

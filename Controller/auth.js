@@ -85,3 +85,11 @@ exports.isAdmin = (req,res,next) => {
     }    
   next()
 };
+exports.islender = (req,res,next) => {
+    if(req.profile.role !== 'lender'){
+      res.status(403).json({
+        error : "Not a lender"
+      });
+    }    
+  next()
+};

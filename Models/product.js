@@ -20,12 +20,12 @@ const productSchema = new mongoose.Schema({
         ref: "Category",
         required: true
     },
-    rent: {
+    deposite: {
         type: Number
     },
     units: {
         type: Number,
-        default: 0
+        default: 1
     },
     photos: [
         {
@@ -33,14 +33,15 @@ const productSchema = new mongoose.Schema({
             contentType: String
         }
     ],
-    price: {
+    rent: {
         type: Number,
         required: true,
         maxlength: 32,
         trim: true
     },
     lender: {
-        type: Object,
+        type: ObjectId,
+        ref:"User",
         required: true
     },
     requests: [

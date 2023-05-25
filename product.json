@@ -1,0 +1,163 @@
+{
+
+
+ {
+        "units": 1,
+        "_id": "64478d7506ccc71918e5f4ff",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter",
+        "rent": 400,
+        "deposite": 700,
+        "category": null,
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T08:21:09.163Z",
+        "updatedAt": "2023-04-25T08:21:09.163Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "64479d0581ea3f340c0b2e04",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter 2",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T09:27:33.857Z",
+        "updatedAt": "2023-04-25T09:27:33.857Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "6447fb982b004e10fc5535f0",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter 2",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T16:11:04.974Z",
+        "updatedAt": "2023-04-25T16:11:04.974Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "64480302f1f2cd12fc329958",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter test 2",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T16:42:42.968Z",
+        "updatedAt": "2023-04-25T16:42:42.968Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "644808b2c0224513ccd78fa5",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter test 4",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T17:06:58.117Z",
+        "updatedAt": "2023-04-25T17:06:58.117Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "644809223824cb3834879bcc",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter test 4",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T17:08:50.698Z",
+        "updatedAt": "2023-04-25T17:08:50.698Z",
+        "__v": 0
+    },
+    {
+        "units": 1,
+        "_id": "644810557c6cae04c47d1288",
+        "name": "Red Swetter",
+        "description": "A beautiful red swetter test 7",
+        "rent": 400,
+        "deposite": 700,
+        "category": {
+            "_id": "644776ade9324017f044ecff",
+            "name": "Dresses",
+            "size": 10,
+            "season": "Summer",
+            "gender": "Female",
+            "createdAt": "2023-04-25T06:43:57.262Z",
+            "updatedAt": "2023-04-25T06:43:57.262Z",
+            "__v": 0
+        },
+        "lender": "63f4663cfdbb4c2374e9f9fc",
+        "photos": [],
+        "requests": [],
+        "createdAt": "2023-04-25T17:39:33.899Z",
+        "updatedAt": "2023-04-25T17:39:33.899Z",
+        "__v": 0
+    }
+}

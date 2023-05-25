@@ -146,33 +146,32 @@ exports.createProduct = (req, res) => {
 
 
   exports.updateProduct = (req, res) => {
-    let form = new formidable.IncomingForm();
+    const productId = req.product._id;
+    const form = new formidable.IncomingForm();
     form.keepExtensions = true;
   
-    form.parse(req, (err, fields, file) => {
+    form.parse(req, (err, fields, files) => {
       if (err) {
         return res.status(400).json({
           error: "Problem with image",
         });
       }
   
-      let product = req.product;
-      product = _.extend(product, fields);
-  
-      //handle file here
-      if (file.photo) {
-        if (file.photo.size > 3000000) {
+      // Update the product fields
+      let updateFields = _.cloneDeep(fields);
+      if (files.photo) {
+        if (files.photo.size > 3000000) {
           return res.status(400).json({
             error: "File size too big!",
           });
         }
-        product.photo.data = fs.readFileSync(file.photo.path);
-        product.photo.contentType = file.photo.type;
+        updateFields.photo = {
+          data: fs.readFileSync(files.photo.path),
+          contentType: files.photo.type,
+        };
       }
-  
-      //save to the DB
-      product.save((err, product) => {
-        if (err) {
+      Product.findByIdAndUpdate(productId, updateFields, { new: true }, (err, product) => {
+        if (err || !product) {
           return res.status(400).json({
             error: "Updation of product failed",
           });
@@ -181,7 +180,7 @@ exports.createProduct = (req, res) => {
       });
     });
   };
-
+  
   exports.getAllUniqueCategories = (req, res) => {
     Product.distinct("category", {}, (err, categories) => {
       if (err) {

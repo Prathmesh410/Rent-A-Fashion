@@ -120,13 +120,18 @@ exports.createProduct = (req, res) => {
       });
   };
 
-  exports.getProductPhoto = (req, res, next) => {
-    if (req.product.photo.data) {
-      res.set("Content-Type", req.product.photo.contentType);
-      return res.send(req.product.photo.data);
-    }
+exports.getProductPhoto = (req, res, next) => {
+  if (req.product.photos && req.product.photos.length > 0) {
+    req.product.photos.forEach((photo) => {
+      if (photo.data) {
+        res.write(photo.data);
+      }
+    });
+    res.end();
+  } else {
     next();
-  };
+  }
+};
 
 
   exports.deleteProduct = (req, res) => {
@@ -191,3 +196,68 @@ exports.createProduct = (req, res) => {
       res.json(categories);
     });
   };
+
+  exports.updateAddedReview = (reviewId, productId) => {
+    Product.findByIdAndUpdate(
+      productId,
+      { $push: { review: reviewId } },
+      { new: true },
+      (err, user) => {
+        if (err) {
+          console.log("Failed to add Product Review", err);
+        }
+        console.log("Review added successfully", user);
+      }
+    );
+  };
+
+  exports.updateAddedRequest = (requestId, productId) => {
+    Product.findByIdAndUpdate(
+      productId,
+      { $push: { requests: requestId } },
+      { new: true },
+      (err, product) => {
+        if (err) {
+          console.log("Failed to add Request to Product", err);
+        }
+        console.log("Request added to Product successfully", product);
+      }
+    );
+  };
+
+  exports.removeReview = (reviewId, productId) => {
+    Product.findByIdAndUpdate(
+      productId,
+      { $pull: { review: reviewId } },
+      { new: true },
+      (err, product) => {
+        if (err) {
+          return res.status(400).json({
+            error: "Failed to remove review from product",
+          });
+        }
+        console.log("Review removed")
+      }
+    );
+  };
+
+  exports.removeAddedRequest = (requestId, productId) => {
+    Product.findByIdAndUpdate(
+      productId,
+      { $pull: { requests: requestId } },
+      { new: true },
+      (err, product) => {
+        if (err) {
+          return res.status(400).json({
+            error: "Failed to remove request from product",
+          });
+        }
+        console.log("Request removed")
+      }
+    );
+  };
+
+
+
+ 
+  

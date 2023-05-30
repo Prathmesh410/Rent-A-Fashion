@@ -12,7 +12,11 @@ const {
   getAllProducts,
 } = require("../Controller/product");
 const { getUserById } = require("../Controller/user");
-const { isSignedIn, isAuthenticated, isAdmin ,islender} = require("../Controller/auth");
+const {
+  isSignedIn,
+  isAuthenticated,
+  islender,
+} = require("../Controller/auth");
 
 //params
 router.param("userId", getUserById);

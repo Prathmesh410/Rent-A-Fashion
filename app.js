@@ -13,6 +13,8 @@ const authRoutes = require("./Routes/auth");
 const userRoutes = require("./Routes/user");
 const productRoutes = require("./Routes/product");
 const categoryRoutes = require("./Routes/category");
+const reviewRoutes = require("./Routes/review");
+const requestRoutes = require("./Routes/request");
 
 
 //Middlewares
@@ -26,6 +28,8 @@ app.use("/api",authRoutes);
 app.use("/api",userRoutes);
 app.use("/api",productRoutes);
 app.use("/api",categoryRoutes);
+app.use("/api",reviewRoutes);
+app.use("/api",requestRoutes);
 
 
 //Database Connection

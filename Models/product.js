@@ -44,23 +44,10 @@ const productSchema = new mongoose.Schema({
         ref:"User",
         required: true
     },
-    requests: [
-        {
-            borrower: {
-                type: ObjectId,
-                ref: "User"
-            },
-            date: {
-                type: Date,
-                default: Date.now
-            },
-            status: {
-                type: String,
-                enum: ["requested", "accepted", "declined"],
-                default: "requested"
-            }
-        }
-    ],
+    requests: [{
+        type: ObjectId,
+        ref: "Request"
+    }],
     review: {
         type: ObjectId,
         ref: "Review"

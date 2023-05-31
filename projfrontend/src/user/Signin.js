@@ -42,7 +42,7 @@ const Signin = () => {
 
   const performRedirect = () => {
     if (didRedirect) {
-      if (user && user.role === 1) {
+      if (user && user.role === 'lender') {
          
         return <Redirect  to = "/admin/dashboard"/>;
       } else {

@@ -13,9 +13,12 @@ const Card = ({ product ,addtoCart = true,
 
 
 
-    const cartTitle = product ? product.name :"A photo from Pixles"
-    const cartDescription = product ? product.description :"Default "
-    const cartPrice = product ? product.rent :"NA"
+    const cardTitle = product ? product.name :"A photo from Pixles"
+    const cardDescription = product ? product.description :"Default "
+    const cardPrice = product ? product.rent :"NA"
+    const cardDeposit = product ? product.deposite : "NA"
+    const cardavailableDuration = product? product.availableDuration : "3 days"
+
 
     const addToCart =( ) =>{
       addItemToCart(product,() => setRedirect(true))
@@ -34,9 +37,9 @@ const Card = ({ product ,addtoCart = true,
         <button
         onClick={addToCart}
         className="btn btn-block btn-outline mt-2 mb-2 rounded"
-        style={{backgroundColor:"#f90",color:"#FFF9F5" }}
+        style={{backgroundColor:"#f0ab5c",color:"#FFF9F5",fontSize:"17px" }}
       >
-        Add to Cart
+        Add a request
       </button>
       )
     }
@@ -49,24 +52,26 @@ const Card = ({ product ,addtoCart = true,
                 setReload(!reload);
               }}
               className="btn btn-block  mt-2 mb-2 rounded"
-              style={{backgroundColor:"rgb(71 89 107)",color:"#FFF9F5" }}
+              style={{backgroundColor:"#f0ab5c",color:"#FFF9F5" }}
             >
-              Remove from cart
+              Remove request
             </button>
       )
     }
 
   
   return (
-    <div className="card text-white border-outline-warning"  style={{border:"1px  solid #f90"  }}>
-      <div className="card-header display-6" style={{backgroundColor:"#FFF9F5" ,border:"none" ,color:"#212832"}} >{cartTitle}</div>
-      <div className="card-body" style={{backgroundColor:"#FFF9F5"}}>
+    <div className="card text-white border-solid"  >
+      <div className="card-body" style={{backgroundColor:"#FFFFFF"}}>
         {getARedirect(redirect)}
         <ImageHelper product={product} />
-        <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px"}} >
-          {cartDescription}
-        </p>
-        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f90" , color:"#212832" ,fontWeight:"normal"}}>${cartPrice}</p>
+
+        <p className="lead text-wrap " style={{color:"#212832" ,fontSize:"21px",fontWeight:"bold", marginBottom:"0px",alignContent:"start"}} >{cardTitle}</p>
+        <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px",marginBottom:"0px"}} >{cardDescription}</p>
+        <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px"}} >Available for: {cardavailableDuration}</p>
+      
+        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f0ab5c" , color:"#212832" ,fontWeight:"normal" ,marginRight:"20px"}}>INR {cardPrice}</p>
+        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f0ab5c" , color:"#212832" ,fontWeight:"normal"}}>INR {cardDeposit}</p>
         <div className="row">
           <div className="col-12">
            {showAddToCart(addtoCart)}

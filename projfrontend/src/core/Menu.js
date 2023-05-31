@@ -6,36 +6,36 @@ import { signout,isAutheticated } from '../auth/helper';
 
 const currentTab = (history,path) =>{
     if(history.location.pathname === path){
-        return{color :"#d61f27" }  
+        return{color :"#000000" }  
     }
     else{
         return {color :"#ffffff"}
     }
 }
 const Menu = ({history})=> (
-    <div style={{backgroundColor:"#000000" }}>
+    <div style={{backgroundColor:"#f0ab5c" }}>
         <ul className="nav nav-tabs" >
         <li className="nav-item">
-            <Link style={currentTab(history,"/")} className="nav-link" to="/">
+            <Link style={currentTab(history,"/")} className="nav-link lead" to="/">
                 Home
             </Link>
         </li>
         <li className="nav-item">
-            <Link style={currentTab(history,"/cart")} className="nav-link" to="/cart">
+            <Link style={currentTab(history,"/cart")} className="nav-link lead" to="/cart">
                 Cart
             </Link>
         </li>
-       {isAutheticated() && isAutheticated().user.role === 0 && (
+       {isAutheticated()  && (
             <li className="nav-item">
             <Link style={currentTab(history,"/user/dashboard")} className="nav-link" to="/user/dashboard">
-                U.Dashboard
+                User
             </Link>
         </li>
        )}
        
-        {isAutheticated() && isAutheticated().user.role === 1 && (
+        {isAutheticated() && isAutheticated().user.role === 'admin' && (
             <li className="nav-item">
-            <Link  style={currentTab(history,"/admin/dashboard")} className="nav-link" to="/admin/dashboard">
+            <Link  style={currentTab(history,"/admin/dashboard")} className="nav-link lead" to="/admin/dashboard">
                 A.Dashboard
             </Link>
         </li>
@@ -45,12 +45,12 @@ const Menu = ({history})=> (
           !isAutheticated() && (
             <Fragment>
             <li className="nav-item">
-                <Link style={currentTab(history,"/signup")} className="nav-link" to="/signup">
+                <Link style={currentTab(history,"/signup")} className="nav-link lead" to="/signup">
                     signup
                 </Link>
             </li>
             <li className="nav-item">
-                <Link style={currentTab(history,"/signin")} className="nav-link" to="/signin">
+                <Link style={currentTab(history,"/signin")} className="nav-link lead" to="/signin">
                     signin
                 </Link>
             </li>

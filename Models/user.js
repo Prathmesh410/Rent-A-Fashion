@@ -48,7 +48,29 @@ const userSchema = new mongoose.Schema({
   reviews: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Review'
-  }]
+  }],
+  address: {
+    street: {
+      type: String,
+      maxlength: 100
+    },
+    city: {
+      type: String,
+      maxlength: 50
+    },
+    state: {
+      type: String,
+      maxlength: 50
+    },
+    postalCode: {
+      type: String,
+      maxlength: 10
+    },
+    country: {
+      type: String,
+      maxlength: 50
+    }
+  }
 }, {
   timestamps: true
 });

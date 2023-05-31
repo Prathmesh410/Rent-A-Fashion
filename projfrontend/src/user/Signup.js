@@ -86,7 +86,7 @@ const errorMessage =()=>{
                             <lable style={{color:"#212832"}} className="lead">Password</lable>
                             <input className="form-control" onChange={handleChange("password")} type="password" value={password}/>
                         </div>
-                        <button onClick={onSubmit} className="btn  rounded  btn-block" style={{marginTop:"8px" , backgroundColor:"#f90",color:"#FFF9F5"}}>Submit</button>
+                        <button onClick={onSubmit} className="btn  rounded  btn-block" style={{marginTop:"8px" , backgroundColor:"#f0ab5c",color:"#FFFFFF",fontWeight:"bold"}}>Submit</button>
                     </form>
                 </div>
             </div>

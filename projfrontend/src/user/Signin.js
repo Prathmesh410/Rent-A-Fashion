@@ -103,7 +103,7 @@ const Signin = () => {
                 type="password"
               />
             </div>
-            <button onClick={onSubmit} className="btn rounded btn-block" style={{marginTop:"8px" , backgroundColor:"#f90",color:"#FFF9F5"}}>
+            <button onClick={onSubmit} className="btn rounded btn-block" style={{marginTop:"8px" , backgroundColor:"#f0ab5c",color:"#FFFFFF",fontWeight:"bold"}}>
               Submit
             </button>
           </form>

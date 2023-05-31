@@ -15,6 +15,7 @@ const productSchema = new mongoose.Schema({
         required: true,
         maxlength: 500
     },
+
     category: {
         type: ObjectId,
         ref: "Category",
@@ -51,7 +52,12 @@ const productSchema = new mongoose.Schema({
     review: {
         type: ObjectId,
         ref: "Review"
-    }
+    },
+    availableDuration: {
+        type: String,
+        enum: ["3 days", "5 days", "more than a week"],
+        required: true
+      }
 }, {timestamps: true});
 
 module.exports = mongoose.model("Product", productSchema);

@@ -9,19 +9,13 @@ const Base = ({
 }) => (
   <div>
     <Menu />
-    <div className="container-fluid min-vh-100 mh-100">
+    <div className="container-fluid min-vh-100 mh-100 "  style={{background: 'linear-gradient(to bottom,#add3fb, #e5d2ec'}} >
       <div className="jumbotron text-center" style={{color : "#212832"}}>
         <h2 className="display-4">{title}</h2>
-        <p className="lead">{description}</p>
+        <p style={{fontSize:'27px'}}>{description}</p>
       </div>
       <div className={className}>{children} </div>
     </div>
-    <footer className="footer mt-auto p-3">
-      <div className="container-fluid text-center py-3" style={{backgroundColor:"#F0F4F9" ,color:"#212832"}}>
-        <h4 className="lead" style={{fontWeight:"normal"}}>If you got any questions, feel free to reach out!</h4>
-        <button className="btn btn-lg rounded" style={{backgroundColor:"#f90", color:"#FFF9F5"}}>Contact Us</button>
-      </div>
-    </footer>
   </div>
 );
 

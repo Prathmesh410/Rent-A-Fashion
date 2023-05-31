@@ -200,7 +200,7 @@ const UpdateProduct = ({ match }) => {
       className="container bg-info p-4"
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
-        Admin Home
+      Go back
       </Link>
       <div className="row bg-dark text-white rounded">
         <div className="col-md-8 offset-md-2">

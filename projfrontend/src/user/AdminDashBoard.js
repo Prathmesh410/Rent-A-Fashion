@@ -11,11 +11,11 @@ const  AdminDashBoard = () => {
 
     const adminLeftSide = () => {
         return (
-            <div className="card " style={{backgroundColor:"#f90"}}>
-                <h3 className="card-header bg-dark text-white">Admin Navigation</h3>
+            <div className="card " style={{backgroundColor:"#F0F4F9"}}>
+                <h3 className="card-header bg-dark text-white">Lender Options</h3>
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <Link to ="/admin/create/category" className=" nav-link text-success">
+                        <Link to ="/admin/create/category" className=" nav-link text-success ">
                         Create Categories
                         </Link>
                         <Link to ="/admin/categories" className=" nav-link text-success">
@@ -41,7 +41,7 @@ const  AdminDashBoard = () => {
     const adminRightSide = () => {
      return(
          <div className="card mb-4">
-             <h3 className="card-header">Admin Information</h3>
+             <h3 className="card-header">User Information</h3>
              <ul className="list-group">
                  <li className="list-group-item">
                     <span className="badge bg-success mr-2">
@@ -54,7 +54,7 @@ const  AdminDashBoard = () => {
                      </span> {email}
                  </li>
                  <li className="list-group-item">
-                    <span className="badge bg-danger">Admin Area</span>
+                    <span className="badge bg-danger">Lender Area</span>
                  </li>
              </ul>
          </div>
@@ -68,10 +68,10 @@ const  AdminDashBoard = () => {
 
 
     return (
-        <Base title =" welcome to Admin Area" description="Manage all the work here"
-        className="container bg-warning p-4">
+        <Base title ="Rent-A-Fashion" description="Manage categories and Prodcuts"
+        className="container border-outline p-4" style={{background:"#F0F4F9"}}>
 
-        <div className="row">
+        <div className="row" style={{background:"#F0F4F9"}}>
             <div className="col-3">{adminLeftSide()}</div>
             <div className="col-9">{adminRightSide()}</div>
         </div>

@@ -167,12 +167,12 @@ const AddProduct = () => {
     <Base
       title="Add a product here!"
       description="Welcome to product creation section"
-      className="container bg-info p-4"
+      className="container  p-4 " style={{background:"#F0F4F9"}}
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
-        Admin Home
+      Go back
       </Link>
-      <div className="row bg-dark text-white rounded">
+      <div className="row  text-white rounded" style={{background:"#F0F4F9"}}>
         <div className="col-md-8 offset-md-2">
           {successMessage()}
           {createProductForm()}

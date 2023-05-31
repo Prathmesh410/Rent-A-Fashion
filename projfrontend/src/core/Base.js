@@ -9,7 +9,7 @@ const Base = ({
 }) => (
   <div>
     <Menu />
-    <div className="container-fluid min-vh-100 mh-100 "  style={{background: 'linear-gradient(to bottom,#add3fb, #e5d2ec'}} >
+    <div className="container-fluid min-vh-100 mh-100 "  style={{background: '#ffffff'}} >
       <div className="jumbotron text-center" style={{color : "#212832"}}>
         <h2 className="display-4">{title}</h2>
         <p style={{fontSize:'27px'}}>{description}</p>

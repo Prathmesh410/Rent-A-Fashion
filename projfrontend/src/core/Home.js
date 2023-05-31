@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <Base title="Home Page" description="welcome to the home page" >
-      <div className="row text-center" style={{backgroundColor:"#fffaf4" , color:"#212832"}}>
+      <div className="row text-center" style={{backgroundColor:"#F0F4F9" , color:"#212832"}}>
         <h1 style={{color:"#000000" }} className="display-6">All of Products</h1>
         <div className="row">
           {products.map((product,index) =>{

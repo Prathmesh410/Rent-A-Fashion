@@ -125,7 +125,7 @@ const ManageCategories =()=> {
         <Base title="Welcome admin" description="Manage products here">
       <h2 className="mb-4">All Categories:</h2>
       <Link className="btn btn-info" to={`/admin/dashboard`}>
-        <span className="">Admin Home</span>
+        <span className=""> Go back</span>
       </Link>
       {categories && categories.map((category) =>{
         return(
@@ -144,7 +144,7 @@ const ManageCategories =()=> {
                 </Link>
               </div>
               <div className="col-4">
-                <button onClick={() => {deleteThisCategory(category._id)}} className="btn btn-danger">
+                <button onClick={() => {deleteThisCategory(category._id)}} className="btn" style={{background:"#B23B00" , color:"#ffffff"}}>
                   Delete
                 </button>
               </div>

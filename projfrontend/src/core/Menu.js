@@ -6,14 +6,14 @@ import { signout,isAutheticated } from '../auth/helper';
 
 const currentTab = (history,path) =>{
     if(history.location.pathname === path){
-        return{color :"#000000" }  
+        return{color :"#B23B00" }  
     }
     else{
         return {color :"#ffffff"}
     }
 }
 const Menu = ({history})=> (
-    <div style={{backgroundColor:"#f0ab5c" }}>
+    <div style={{backgroundColor:"#000000" }}>
         <ul className="nav nav-tabs" >
         <li className="nav-item">
             <Link style={currentTab(history,"/")} className="nav-link lead" to="/">
@@ -27,7 +27,7 @@ const Menu = ({history})=> (
         </li>
        {isAutheticated()  && (
             <li className="nav-item">
-            <Link style={currentTab(history,"/user/dashboard")} className="nav-link" to="/user/dashboard">
+            <Link style={currentTab(history,"/user/dashboard")} className="nav-link lead" to="/user/dashboard">
                 User
             </Link>
         </li>
@@ -36,7 +36,7 @@ const Menu = ({history})=> (
         {isAutheticated() && isAutheticated().user.role === 'admin' && (
             <li className="nav-item">
             <Link  style={currentTab(history,"/admin/dashboard")} className="nav-link lead" to="/admin/dashboard">
-                A.Dashboard
+                Add Products
             </Link>
         </li>
         )}
@@ -60,8 +60,8 @@ const Menu = ({history})=> (
            {isAutheticated() && (
                <li className="nav-item">
                    <span 
-                   className="nav-link"
-                   style={{color : "#b96100"}}
+                   className="nav-link lead "
+                   style={{color : "#B23B00", fontWeight:"bold"}}
                    onClick={()=>{
                        signout(()=>{
                            history.push("/");

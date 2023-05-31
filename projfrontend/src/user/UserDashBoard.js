@@ -11,7 +11,7 @@ import {getProductById} from "./helper/userapicalls"
     
     return (
         <Base title ="UserDashBoard" description=''>
-            <div className='row text-center rounded' style={{backgroundColor:"#fffaf4" , color:"#212832"}}>
+            <div className='row text-center rounded' style={{backgroundColor:"#F0F4F9" , color:"#212832"}}>
                     <p className='lead display-6'>Account</p>
                     <div style={{display:"flex" , marginBottom:"15px"}}>
                         <p style={{fontWeight:"bold" , fontSize:"19px",marginRight:"15px" ,marginBottom:"0px"}}>Name :</p>

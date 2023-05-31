@@ -9,7 +9,7 @@ const Card = ({ product ,addtoCart = true,
   ,reload=undefined}) => {
 
     const [redirect, setRedirect] = useState(false);
-    const [count, setCount] = useState(product.count)
+
 
 
 
@@ -37,7 +37,7 @@ const Card = ({ product ,addtoCart = true,
         <button
         onClick={addToCart}
         className="btn btn-block btn-outline mt-2 mb-2 rounded"
-        style={{backgroundColor:"#f0ab5c",color:"#FFF9F5",fontSize:"17px" }}
+        style={{backgroundColor:"#B23B00",color:"#FFF9F5",fontSize:"17px" }}
       >
         Add a request
       </button>
@@ -52,7 +52,7 @@ const Card = ({ product ,addtoCart = true,
                 setReload(!reload);
               }}
               className="btn btn-block  mt-2 mb-2 rounded"
-              style={{backgroundColor:"#f0ab5c",color:"#FFF9F5" }}
+              style={{backgroundColor:"#B23B00",color:"#FFF9F5" }}
             >
               Remove request
             </button>
@@ -70,8 +70,8 @@ const Card = ({ product ,addtoCart = true,
         <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px",marginBottom:"0px"}} >{cardDescription}</p>
         <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px"}} >Available for: {cardavailableDuration}</p>
       
-        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f0ab5c" , color:"#212832" ,fontWeight:"normal" ,marginRight:"20px"}}>INR {cardPrice}</p>
-        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f0ab5c" , color:"#212832" ,fontWeight:"normal"}}>INR {cardDeposit}</p>
+        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #B23B00" , color:"#212832" ,fontWeight:"normal" ,marginRight:"20px"}}>Rent :{cardPrice}</p>
+        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #B23B00" , color:"#212832" ,fontWeight:"normal"}}>Deposite :{cardDeposit}</p>
         <div className="row">
           <div className="col-12">
            {showAddToCart(addtoCart)}

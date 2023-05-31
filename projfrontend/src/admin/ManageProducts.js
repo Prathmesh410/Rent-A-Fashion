@@ -50,7 +50,7 @@ const ManageProducts = () => {
         <Base title="Welcome admin" description="Manage products here">
       <h2 className="mb-4">All products:</h2>
       <Link className="btn btn-warning" to={`/admin/dashboard`}>
-        <span className="">Admin Home</span>
+        <span className=""> Go back</span>
       </Link>
       <div className="row">
         <div className="col-12">

@@ -14,7 +14,7 @@ const AddCategory = () => {
   const goBack = () => (
     <div className="mt-5">
       <Link className="btn btn-sm btn-success mb-3" to="/admin/dashboard">
-        Admin Home
+        Go back
       </Link>
     </div>
   );
@@ -77,10 +77,11 @@ const AddCategory = () => {
     <Base
       title="Create a category here"
       description="Add a new category for new tshirts"
-      className="container bg-warning p-4"
+      className="container  p-4"
+      style={{background:"#F0F4F9"}}
     >
-      <div className="row bg-white rounded">
-        <div className="col-md-8 offset-md-2">
+      <div className="row bg-white rounded" style={{background:"#F0F4F9"}}>
+        <div className="col-md-8 offset-md-2" style={{background:"#F0F4F9"}}>
           {successMessage()}
           {warningMessage()}
           {myCategoryForm()}
